@@ -48,7 +48,7 @@
 
       </div>
       <!-- Download Button -->
-      <button onclick="downloadPDF()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+      <button onclick="window.print()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
         Download as PDF
       </button>
     </div>
@@ -59,17 +59,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    function downloadPDF() {
-      const qrElement = document.getElementById("qr-container");
-      html2pdf().from(qrElement).set({
-        margin: 10,
-        filename: 'Parkitx_QR_Ticket.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a6', orientation: 'portrait' }
-      }).save();
-    }
-  </script>
+ 
 </body>
 </html>
